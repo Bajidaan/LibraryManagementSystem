@@ -20,6 +20,7 @@ public class BookController {
     private final BookService bookService;
 
     @PostMapping("add")
+    @ResponseStatus(HttpStatus.OK)
     public Map<String, String> addBook(@Valid @RequestBody Books book) {
         return bookService.addBook(book);
     }

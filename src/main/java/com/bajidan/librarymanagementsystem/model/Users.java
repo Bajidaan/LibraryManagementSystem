@@ -9,13 +9,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.cache.annotation.EnableCaching;
 
 @Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "email")})
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Users {
 
 
@@ -36,5 +34,10 @@ public class Users {
     @NotBlank
     private String address;
 
-
+    public Users(String fullName, String email, int age, String address) {
+        this.fullName = fullName;
+        this.email = email;
+        this.age = age;
+        this.address = address;
+    }
 }

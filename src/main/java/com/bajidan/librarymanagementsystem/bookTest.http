@@ -3,23 +3,23 @@ POST http://localhost:8080/api/v1/book/add
 Content-Type: application/json
 
 {
-  "title": "The hat man",
-  "author": "Daniel Stone",
-  "isbn": "AUU-497",
-  "year": 2012
+  "title": "Breeze",
+  "author": "Emma White",
+  "isbn": "YTY-456",
+  "year": 2018
 }
 
 ###
 GET http://localhost:8080/api/v1/book/getAll
 
 ###
-GET http://localhost:8080/api/v1/book/getById/6
+GET http://localhost:8080/api/v1/book/getById/9
 
 ###
 GET http://localhost:8080/api/v1/book/getByIsbn/AUU-497
 
 ###
-GET http://localhost:8080/api/v1/book/getByTitle/hat
+GET http://localhost:8080/api/v1/book/getByTitle/ec
 
 ###
 DELETE http://localhost:8080/api/v1/book/delete/6
@@ -29,9 +29,13 @@ POST http://localhost:8080/api/v1/book/borrowBook
 Content-Type: application/json
 
 {
-  "userEmail": "tem@gmail.com",
-  "title": "Breeze"
+  "userEmail": "ebuks@gmail.com",
+  "title": "Swift"
 }
+
+
+
+
 
 
 

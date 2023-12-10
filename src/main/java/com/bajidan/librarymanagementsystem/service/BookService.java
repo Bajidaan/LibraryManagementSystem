@@ -47,7 +47,6 @@ public class BookService {
                         () -> new UserNotFoundException(String.format("Book with id %d does not exist", id)));
     }
 
-
     @Cacheable(cacheNames = "getByTitle")
     public List<Books> findBookByTitle(String title) {
         return bookRepository.findBooksByTitle(title).orElseThrow(
@@ -57,7 +56,7 @@ public class BookService {
     public Books findSingleBookByTitle(String title) {
         return bookRepository.findByTitle(title).orElseThrow(
                 () -> new UserNotFoundException(String.format("Book with title: \"%s\" does not exist", title)));
-    }
+    } //
 
     @Cacheable(cacheNames = "getByIsbn")
     public Books findBookByIsbn(String isbn) {
@@ -76,7 +75,6 @@ public class BookService {
         bookRepository.deleteById(id);
         return Map.of("message", "Book deleted");
     }
-
 
     public Map<String, String> borrowBook(UserBookDetails details)  {
         Users borrowedUser = userService.findByEmail(details.userEmail()).getBody();

@@ -3,10 +3,10 @@ POST http://localhost:8080/api/v1/users/signUp
 Content-Type: application/json
 
 {
-  "fullName": "Ayo Jacobs",
-  "email": "ay@gmail.com",
-  "age": 20,
-  "address": "34 Glover road"
+  "fullName": "Ebuka Ibeh",
+  "email": "ebuks@gmail.com",
+  "age": 43,
+  "address": "55 Rave road"
 }
 
 ###

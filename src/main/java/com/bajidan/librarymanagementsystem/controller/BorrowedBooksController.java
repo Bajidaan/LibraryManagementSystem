@@ -32,7 +32,7 @@ public class BorrowedBooksController {
         return borrowedBooksService.deleteById(id);
     }
 
-    @DeleteMapping("return/{email}")
+    @DeleteMapping("returnBook/{email}")
     public Map<String, String> returnBorrowedBook(@PathVariable String email) {
         return borrowedBooksService.deleteByEmail(email);
     }
