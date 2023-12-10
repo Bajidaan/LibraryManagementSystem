@@ -53,6 +53,13 @@ public class BookController {
         return bookService.deleteById(id);
     }
 
+    @DeleteMapping("deleteByIsbn/{isbn}")
+    @ResponseStatus(HttpStatus.OK)
+    public Map<String, String> deleteByIsbn(@PathVariable String isbn) {
+        return bookService.deleteByIsbn(isbn);
+    }
+
+
     @PostMapping("borrowBook")
     @ResponseStatus(HttpStatus.OK)
     public Map<String, String> borrowBook(@RequestBody UserBookDetails details)  {

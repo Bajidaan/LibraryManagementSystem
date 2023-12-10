@@ -13,7 +13,7 @@ Content-Type: application/json
 GET http://localhost:8080/api/v1/book/getAll
 
 ###
-GET http://localhost:8080/api/v1/book/getById/9
+GET http://localhost:8080/api/v1/book/getById/10
 
 ###
 GET http://localhost:8080/api/v1/book/getByIsbn/AUU-497
@@ -22,7 +22,10 @@ GET http://localhost:8080/api/v1/book/getByIsbn/AUU-497
 GET http://localhost:8080/api/v1/book/getByTitle/ec
 
 ###
-DELETE http://localhost:8080/api/v1/book/delete/6
+DELETE http://localhost:8080/api/v1/book/delete/10
+
+###
+DELETE http://localhost:8080/api/v1/book/deleteByIsbn/YTY-456
 
 ###
 POST http://localhost:8080/api/v1/book/borrowBook

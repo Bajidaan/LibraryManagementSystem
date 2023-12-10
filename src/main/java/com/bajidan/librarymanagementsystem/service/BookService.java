@@ -76,6 +76,19 @@ public class BookService {
         return Map.of("message", "Book deleted");
     }
 
+    @CacheEvict(cacheNames = {
+            "allBooks",
+            "getById",
+            "getByTitle",
+            "getByIsbn",
+            "getByFullTitle"
+    }, allEntries = true)
+    public Map<String, String> deleteByIsbn(String isbn) {
+        bookRepository.deleteByIsbn(isbn);
+        return Map.of("message", String.format("Book with isbn:%s is deleted", isbn));
+    }
+
+
     public Map<String, String> borrowBook(UserBookDetails details)  {
         Users borrowedUser = userService.findByEmail(details.userEmail()).getBody();
         Books bookToBeBorrowed = findSingleBookByTitle(details.title());
