@@ -1,0 +1,37 @@
+###
+POST http://localhost:8080/api/v1/book/add
+Content-Type: application/json
+
+{
+  "title": "The hat man",
+  "author": "Daniel Stone",
+  "isbn": "AUU-497",
+  "year": 2012
+}
+
+###
+GET http://localhost:8080/api/v1/book/getAll
+
+###
+GET http://localhost:8080/api/v1/book/getById/6
+
+###
+GET http://localhost:8080/api/v1/book/getByIsbn/AUU-497
+
+###
+GET http://localhost:8080/api/v1/book/getByTitle/hat
+
+###
+DELETE http://localhost:8080/api/v1/book/delete/6
+
+###
+POST http://localhost:8080/api/v1/book/borrowBook
+Content-Type: application/json
+
+{
+  "userEmail": "tem@gmail.com",
+  "title": "Breeze"
+}
+
+
+
